@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and Highlight</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .box {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        input[type="text"] {
+            width: calc(100% - 100px);
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            margin-top: 3px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script src="./wordsearch.js"></script>
+    <div class="container">
+        <div class="box" id="paragraph-box">
+            U.S. TikTok users who once saw the app as a haven for free speech say they see signs of censorship after the platform, which is owned by China's ByteDance, was revived by an executive order from President Donald Trump.
+            TikTok users are noting a difference in the short-video app following its revival after going dark on Saturday under a new law -- enacted over national security concerns during the Biden administration with bipartisan support -- that requires it to be sold to a U.S. buyer. Trump has vowed to find a solution to the ban, with several bidders in the mix, including people with close relationships to the new Republican president.
+        </div>
+        <input type="text" id="searchInput" placeholder="Enter a word to search" />
+        <div class="button-container">
+            <button onclick="searchWord()">Search</button>
+            <button onclick="clearHighlight()">Clear</button>
+        </div>
+    </div>
+
+   
+</body>
+</html>
